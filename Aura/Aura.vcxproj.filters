@@ -4,6 +4,9 @@
     <Filter Include="Aura">
       <UniqueIdentifier>{EEB4827C-DAEB-830D-83D8-69106FEEFF0E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Aura\Events">
+      <UniqueIdentifier>{12C999D0-7E7E-12C6-0773-0C9D732709CA}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Aura.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Aura\EntryPoint.h">
       <Filter>Aura</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Aura\Events\ApplicationEvent.h">
+      <Filter>Aura\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Aura\Events\Event.h">
+      <Filter>Aura\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Aura\Events\KeyEvent.h">
+      <Filter>Aura\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Aura\Events\MouseEvent.h">
+      <Filter>Aura\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Aura\Log.h">
       <Filter>Aura</Filter>
