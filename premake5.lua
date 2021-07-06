@@ -18,6 +18,9 @@ project "Aura"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "aupch.h"
+	pchsource "Aura/src/aupch.cpp"
+
 	files 
 	{
 		"%{prj.name}/src/**.h",

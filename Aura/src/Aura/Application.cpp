@@ -1,3 +1,4 @@
+#include "aupch.h"
 #include "Application.h"
 
 #include "Aura/Events/ApplicationEvent.h"

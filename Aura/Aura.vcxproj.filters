@@ -34,6 +34,7 @@
     <ClInclude Include="src\Aura\Log.h">
       <Filter>Aura</Filter>
     </ClInclude>
+    <ClInclude Include="src\aupch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Aura\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Aura\Log.cpp">
       <Filter>Aura</Filter>
     </ClCompile>
+    <ClCompile Include="src\aupch.cpp" />
   </ItemGroup>
 </Project>

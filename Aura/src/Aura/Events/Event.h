@@ -2,9 +2,6 @@
 
 #include "Aura/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Aura {
 
 	enum class EventType

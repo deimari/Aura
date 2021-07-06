@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Aura {
 
 	class AURA_API WindowResizeEvent : public Event
