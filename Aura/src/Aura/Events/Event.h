@@ -1,5 +1,6 @@
 #pragma once
 
+#include "aupch.h"
 #include "Aura/Core.h"
 
 namespace Aura {

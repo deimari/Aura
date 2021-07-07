@@ -10,6 +10,12 @@ workspace "Aura"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Aura/vendor/GLFW/include"
+
+include "Aura/vendor/GLFW"
+
 project "Aura"
 	location "Aura"
 	kind "SharedLib"
@@ -30,7 +36,14 @@ project "Aura"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
