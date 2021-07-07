@@ -1,3 +1,6 @@
 [submodule "Aura/vendor/spdlog"]
 	path = Aura/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Aura/vendor/GLFW"]
+	path = Aura/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW
