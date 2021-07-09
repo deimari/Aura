@@ -34,6 +34,12 @@
     <ClInclude Include="src\Aura\Events\MouseEvent.h">
       <Filter>Aura\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Aura\Layer.h">
+      <Filter>Aura</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Aura\LayerStack.h">
+      <Filter>Aura</Filter>
+    </ClInclude>
     <ClInclude Include="src\Aura\Log.h">
       <Filter>Aura</Filter>
     </ClInclude>
@@ -47,6 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Aura\Application.cpp">
+      <Filter>Aura</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Aura\Layer.cpp">
+      <Filter>Aura</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Aura\LayerStack.cpp">
       <Filter>Aura</Filter>
     </ClCompile>
     <ClCompile Include="src\Aura\Log.cpp">

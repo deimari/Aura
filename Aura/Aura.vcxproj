@@ -83,7 +83,8 @@
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -91,7 +92,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Debug-windows-x86_64\Aura\Aura.lib</ImportLibrary>
-      <AdditionalOptions>/VERBOSE:LIB %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Debug-windows-x86_64\Aura\Aura.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Aura\Aura.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Aura\Aura.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul)</Command>
@@ -110,6 +110,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -136,6 +137,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -158,6 +160,8 @@
     <ClInclude Include="src\Aura\Events\Event.h" />
     <ClInclude Include="src\Aura\Events\KeyEvent.h" />
     <ClInclude Include="src\Aura\Events\MouseEvent.h" />
+    <ClInclude Include="src\Aura\Layer.h" />
+    <ClInclude Include="src\Aura\LayerStack.h" />
     <ClInclude Include="src\Aura\Log.h" />
     <ClInclude Include="src\Aura\Window.h" />
     <ClInclude Include="src\Platform\WindowsWindow.h" />
@@ -165,6 +169,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Aura\Application.cpp" />
+    <ClCompile Include="src\Aura\Layer.cpp" />
+    <ClCompile Include="src\Aura\LayerStack.cpp" />
     <ClCompile Include="src\Aura\Log.cpp" />
     <ClCompile Include="src\Platform\WindowsWindow.cpp" />
     <ClCompile Include="src\aupch.cpp">
