@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Aura/vendor/GLFW/include"
+IncludeDir["Glad"] = "Aura/vendor/Glad/include"
 
 include "Aura/vendor/GLFW"
+include "Aura/vendor/Glad"
 
 project "Aura"
 	location "Aura"
@@ -37,12 +39,14 @@ project "Aura"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -54,7 +58,8 @@ project "Aura"
 		defines
 		{
 			"AU_PLATFORM_WINDOWS",
-			"AU_BUILD_DLL"
+			"AU_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
