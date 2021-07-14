@@ -4,3 +4,6 @@
 [submodule "Aura/vendor/GLFW"]
 	path = Aura/vendor/GLFW
 	url = https://github.com/TheCherno/GLFW
+[submodule "Aura/vendor/imgui"]
+	path = Aura/vendor/imgui
+	url = https://github.com/TheCherno/imgui
