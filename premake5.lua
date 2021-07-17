@@ -1,5 +1,6 @@
 workspace "Aura"
 	architecture "x64"
+	startproject "Sandbox"
 
 	configurations 
 	{
@@ -19,6 +20,7 @@ IncludeDir["ImGui"] = "Aura/vendor/imgui"
 include "Aura/vendor/GLFW"
 include "Aura/vendor/Glad"
 include "Aura/vendor/imgui"
+
 
 project "Aura"
 	location "Aura"
@@ -68,7 +70,7 @@ project "Aura"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 	
 	filter "configurations:Debug"
