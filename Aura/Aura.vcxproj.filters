@@ -7,8 +7,14 @@
     <Filter Include="Aura\Events">
       <UniqueIdentifier>{12C999D0-7E7E-12C6-0773-0C9D732709CA}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Aura\ImGui">
+      <UniqueIdentifier>{98A4664C-845C-A899-ED63-81F5D93A438A}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,6 +40,9 @@
     <ClInclude Include="src\Aura\Events\MouseEvent.h">
       <Filter>Aura\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Aura\ImGui\ImGuiLayer.h">
+      <Filter>Aura\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Aura\Layer.h">
       <Filter>Aura</Filter>
     </ClInclude>
@@ -46,16 +55,20 @@
     <ClInclude Include="src\Aura\Window.h">
       <Filter>Aura</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\WindowsWindow.h">
       <Filter>Platform</Filter>
     </ClInclude>
     <ClInclude Include="src\aupch.h" />
-    <ClInclude Include="src\Aura\ImGui\ImGuiLayer.h" />
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Aura\Application.cpp">
       <Filter>Aura</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Aura\ImGui\ImGuiLayer.cpp">
+      <Filter>Aura\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Aura\Layer.cpp">
       <Filter>Aura</Filter>
@@ -66,11 +79,12 @@
     <ClCompile Include="src\Aura\Log.cpp">
       <Filter>Aura</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\WindowsWindow.cpp">
       <Filter>Platform</Filter>
     </ClCompile>
     <ClCompile Include="src\aupch.cpp" />
-    <ClCompile Include="src\Aura\ImGui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>
