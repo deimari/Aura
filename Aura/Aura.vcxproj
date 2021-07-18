@@ -159,9 +159,11 @@
     <ClInclude Include="src\Aura\Events\MouseEvent.h" />
     <ClInclude Include="src\Aura\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Aura\Input.h" />
+    <ClInclude Include="src\Aura\KeyCodes.h" />
     <ClInclude Include="src\Aura\Layer.h" />
     <ClInclude Include="src\Aura\LayerStack.h" />
     <ClInclude Include="src\Aura\Log.h" />
+    <ClInclude Include="src\Aura\MouseButtonCodes.h" />
     <ClInclude Include="src\Aura\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />

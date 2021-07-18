@@ -6,6 +6,10 @@
 #include "Aura/Layer.h"
 #include "Aura/Log.h"
 
+#include "Aura/Input.h"
+#include "Aura/KeyCodes.h"
+#include "Aura/MouseButtonCodes.h"
+
 #include "Aura/ImGui/ImGuiLayer.h"
 
 //-------------Entry Point-------------

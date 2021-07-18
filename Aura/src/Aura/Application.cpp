@@ -41,7 +41,7 @@ namespace Aura {
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
 
-		AU_CORE_TRACE("{0}", e);
+		// AU_CORE_TRACE("{0}", e);
 
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
 		{
@@ -60,9 +60,6 @@ namespace Aura {
 			
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
-
-			auto [x, y] = Input::GetMousePosition();
-			AU_CORE_TRACE("{0}, {1}", x, y);
 
 			m_Window->OnUpdate();
 		}
