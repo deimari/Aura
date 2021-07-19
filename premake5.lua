@@ -16,6 +16,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Aura/vendor/GLFW/include"
 IncludeDir["Glad"] = "Aura/vendor/Glad/include"
 IncludeDir["ImGui"] = "Aura/vendor/imgui"
+IncludeDir["glm"] = "Aura/vendor/glm"
 
 include "Aura/vendor/GLFW"
 include "Aura/vendor/Glad"
@@ -37,7 +38,9 @@ project "Aura"
 	files 
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 
 	includedirs
@@ -46,7 +49,8 @@ project "Aura"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -88,12 +92,13 @@ project "Aura"
 		runtime "Release"
 		optimize "On"
 
+------------------------------------------------------------------------------------------------------------------
+
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
 	staticruntime "off"
-
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -107,7 +112,8 @@ project "Sandbox"
 	includedirs
 	{
 		"Aura/vendor/spdlog/include",
-		"Aura/src"
+		"Aura/src",
+		"%{IncludeDir.glm}"
 	}
 
 	links
