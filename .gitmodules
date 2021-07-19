@@ -7,3 +7,6 @@
 [submodule "Aura/vendor/imgui"]
 	path = Aura/vendor/imgui
 	url = https://github.com/TheCherno/imgui
+[submodule "Aura/vendor/glm"]
+	path = Aura/vendor/glm
+	url = https://github.com/g-truc/glm
