@@ -7,6 +7,8 @@
 #include "Aura/Events/Event.h"
 #include "Aura/Events/ApplicationEvent.h"
 
+#include "Aura/ImGui/ImGuiLayer.h"
+
 namespace Aura {
 
 	class AURA_API Application
@@ -29,6 +31,7 @@ namespace Aura {
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 	private:
