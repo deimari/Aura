@@ -17,4 +17,3 @@
 #ifdef AU_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
-
