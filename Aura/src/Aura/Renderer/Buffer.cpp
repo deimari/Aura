@@ -27,7 +27,7 @@ namespace Aura {
 			case RendererAPI::OpenGL:  return new OpenGLIndexBuffer(indices, count);
 		}
 
-		AU_CORE_ASSERT(false, "Unknown RendererAPI!!!")
-			return nullptr;
+		AU_CORE_ASSERT(false, "Unknown RendererAPI!!!");
+		return nullptr;
 	}
 }
