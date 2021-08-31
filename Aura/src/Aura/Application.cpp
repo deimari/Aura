@@ -1,9 +1,8 @@
 #include "aupch.h"
 #include "Application.h"
 
-#include <glad/glad.h>
-
 #include "Input.h"
+#include "Renderer/Renderer.h"
 
 namespace Aura {
 
@@ -97,7 +96,7 @@ namespace Aura {
 
 		m_Shader.reset(new Shader(vertexSrc, fragmentSrc));
 
-		std::string vertexSrc2 = R"(
+		std::string vertexSrcTri = R"(
 			#version 330 core
 			
 			layout(location = 0) in vec3 a_Position;
@@ -111,7 +110,7 @@ namespace Aura {
 			}
 		)";
 
-		std::string fragmentSrc2 = R"(
+		std::string fragmentSrcTri = R"(
 			#version 330 core
 			
 			layout(location = 0) out vec4 color;
@@ -124,7 +123,7 @@ namespace Aura {
 			}
 		)";
 
-		m_Shader2.reset(new Shader(vertexSrc2, fragmentSrc2));
+		m_SquareShader.reset(new Shader(vertexSrcTri, fragmentSrcTri));
 	}
 
 	Application::~Application()
@@ -162,16 +161,18 @@ namespace Aura {
 	{
 		while (m_Running)
 		{
-			glClearColor(0.2f, 0.1f, 0.3f, 1);
-			glClear(GL_COLOR_BUFFER_BIT);
+			RenderCommand::SetClearColor({ 0.2f, 0.1f, 0.3f, 1 });
+			RenderCommand::Clear();
 			
-			m_Shader2->Bind();
-			m_SquareVA->Bind();
-			glDrawElements(GL_TRIANGLES, m_SquareVA->GetIndexBuffer()->GetCount(), GL_UNSIGNED_INT, nullptr);
+			Renderer::BeginScene();
+
+			m_SquareShader->Bind();
+			Renderer::Submit(m_SquareVA);
 
 			m_Shader->Bind();
-			m_VertexArray->Bind();
-			glDrawElements(GL_TRIANGLES, m_VertexArray->GetIndexBuffer()->GetCount(), GL_UNSIGNED_INT, nullptr);
+			Renderer::Submit(m_VertexArray);
+
+			Renderer::EndScene();
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();

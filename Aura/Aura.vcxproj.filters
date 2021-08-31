@@ -1352,6 +1352,8 @@
     <ClInclude Include="src\Aura\Renderer\Renderer.h" />
     <ClInclude Include="src\Aura\Renderer\VertexArray.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h" />
+    <ClInclude Include="src\Aura\Renderer\RendererAPI.h" />
+    <ClInclude Include="src\Aura\Renderer\RenderCommand.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Aura\Application.cpp">
@@ -1388,5 +1390,9 @@
     <ClCompile Include="src\Aura\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Aura\Renderer\VertexArray.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp" />
+    <ClCompile Include="src\Aura\Renderer\RendererAPI.cpp" />
+    <ClCompile Include="src\Aura\Renderer\RenderCommand.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp" />
   </ItemGroup>
 </Project>
